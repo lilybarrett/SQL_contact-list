@@ -1,0 +1,6 @@
+<h1>Contact: <%= @contact['name'] %> </h1>
+
+<h2>Skills</h2>
+<% @skills.each do |skill| %>
+  <li><%= skill['description'] %></li>
+<% end %>

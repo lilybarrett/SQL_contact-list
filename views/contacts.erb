@@ -3,7 +3,7 @@
 <ul id="contact-list">
   <% @contacts.each do |contact| %>
     <li class="contact">
-      <%= contact %>
+      <a href="/contacts/<%= contact['id'] %>"><%= contact['name'] %></a>
     </li>
   <% end %>
 </ul>
@@ -12,7 +12,10 @@
   <legend>Add Contact</legend>
   <form method="post" action="/contacts">
     <label for="name">Name</label>
-    <input type="text" name="name" id="name" />
+    <input type="text" name="name" id="name" required/>
+
+    <label for="description">Skill</label>
+    <input type="text" name="description" id="description"/>
 
     <input type="submit" value="Submit" />
   </form>
